@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import './Coin.css';
+import Coin from './Coin';
+import Score from './Score';
 
-function App() {
+const App: React.FC = () => {
+  const [count, setCount] = useState(0);//изначальный счет 0
+
+  const handleClick = () => {
+    setCount(count + 1);//при клике на монетку счет увеличивается на 1
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="coin-container">
+      <h1>Click the Coin!</h1>
+      <Score count={count} />
+      <Coin onClick={handleClick} />
     </div>
   );
-}
+};
 
 export default App;

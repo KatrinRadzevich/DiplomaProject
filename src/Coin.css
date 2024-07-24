@@ -1,0 +1,38 @@
+.coin-container {
+    display: flex;
+    flex-direction: column; /* Размещаем элементы вертикально */
+    justify-content: center; /* Центрируем по вертикали */
+    align-items: center; /* Центрируем по горизонтали */
+    height: 120vh; /* Выравниваем по вертикали на весь экран */
+  }
+  
+  .coin-image {
+    width: 450px; /* Задайте нужную ширину и высоту для картинки */
+    height: 450px;
+    cursor: pointer; /* Добавим указатель мыши для кликабельности */
+    margin-bottom: 140px;
+    transition: opacity 0.3s ease-in-out; /* Плавное изменение прозрачности */
+  }
+  
+  .score-container {
+    margin-top: 0cm; /* Расстояние между картинкой и счетом */
+    text-align: center; /* Выравниваем текст по центру */
+  }
+
+  .coin-clicked {
+    opacity: 0.5; /* Прозрачность при клике */
+    animation: pulse 0.5s ease-out; /* Анимация пульсации */
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
